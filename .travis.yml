@@ -6,7 +6,9 @@ before_install:
   - sudo apt-get install memcached
   - sudo apt-get install libevent-dev
 script:
-  - CD TEST
+  - cd TEST
+  - uname -a
+  - who
   - chmod +x run_script
   - ./run_script
   - telnet localhost 11211
