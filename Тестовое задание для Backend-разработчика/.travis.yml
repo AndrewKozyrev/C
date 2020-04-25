@@ -13,3 +13,4 @@ script:
   - telnet localhost 11211
   - get key1
   - quit
+  - echo "hello"
