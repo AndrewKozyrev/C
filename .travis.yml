@@ -1,7 +1,7 @@
 language: c
 compiler: gcc
 script:
-  - cd "Тестовое задание для Backend-разработчика"
+  - cd TEST
   - sudo ls -a
   - sudo pwd
 before_install:
