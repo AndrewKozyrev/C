@@ -7,4 +7,6 @@ before_install:
 compiler: gcc
 script:
   - ./run_script
-  - ./memclient -h
+  - ./memclient -g
+  - telnet localhost 11211
+  - stats
