@@ -3,10 +3,11 @@ before_install:
   - sudo apt-get install libmemcached-dev
   - sudo apt-get install memcached
   - sudo apt-get install libevent-dev
-  - chmod +x ./Тестовое задание для Backend-разработчика/run_script
+  - cd $$TRAVIS_BUILD_DIR/"Тестовое задание для Backend-разработчика"
+  - chmod +x run_script
 compiler: gcc
 script:
-  - ./Тестовое задание для Backend-разработчика/run_script
+  - ./run_script
   - telnet localhost 11211
   - get key1
   - quit
