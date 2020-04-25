@@ -1,9 +1,10 @@
 language: c
+compiler: gcc
+script:
+  - cd "Тестовое задание для Backend-разработчика"
+  - sudo ls -a
+  - sudo pwd
 before_install:
   - sudo apt-get install libmemcached-dev
   - sudo apt-get install memcached
   - sudo apt-get install libevent-dev
-compiler: gcc
-script:
-  - sudo ls -a
-  - sudo pwd
