@@ -1,0 +1,3 @@
+language: c
+install: libmemcached-dev, memcached, libevent-dev
+compiler: gcc
