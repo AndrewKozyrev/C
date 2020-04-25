@@ -6,7 +6,7 @@ before_install:
   - chmod +x run_script
 compiler: gcc
 script:
-  - ./run_script
+  - ."Тестовое задание для Backend-разработчика"/run_script
   - telnet localhost 11211
   - get key1
   - quit
