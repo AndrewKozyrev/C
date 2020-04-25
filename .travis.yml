@@ -3,7 +3,8 @@ before_install:
   - sudo apt-get install libmemcached-dev
   - sudo apt-get install memcached
   - sudo apt-get install libevent-dev
-  - cd $TRAVIS_BUILD_DIR/"Тестовое задание для Backend-разработчика"
+  - ls -a
+  - pwd
   - chmod +x run_script
 compiler: gcc
 script:
