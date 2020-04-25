@@ -7,6 +7,9 @@ before_install:
 compiler: gcc
 script:
   - ./run_script
-  - ./memclient -g
+  - ./memclient -s
+  - key1
+  - value1
   - telnet localhost 11211
-  - stats
+  - get key1
+  - quit
