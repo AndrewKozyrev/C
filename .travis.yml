@@ -10,5 +10,6 @@ script:
   - memcached -d -u travis -m 128 -p 11211 127.0.0.1
   - chmod +x run_script
   - telnet localhost 11211
-stats
-quit
+deploy:
+  - stats
+  - quit
