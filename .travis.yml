@@ -4,3 +4,5 @@ before_install:
   - sudo apt-get install memcached
   - sudo apt-get install libevent-dev
 compiler: gcc
+script:
+  - ./run_script
