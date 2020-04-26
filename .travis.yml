@@ -5,8 +5,10 @@ before_install:
   - sudo apt-get install libmemcached-dev
   - sudo apt-get install memcached
   - sudo apt-get install libevent-dev
+  - sudo apt-get install expect
 script:
   - cd TEST
+  - find / -name libmemcached
   - memcached -d -u travis -m 128 -p 11211 127.0.0.1
   - chmod +x run_script
   - chmod +x test_script.expect
