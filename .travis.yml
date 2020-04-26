@@ -10,11 +10,11 @@ script:
   - echo "Hello!"
   - cd TEST
   - memcached -d -u travis -m 128 -p 11211 127.0.0.1
-  - chmod +x test_script.expect run_script.sh memclient.expect
+  - chmod +x telnet_test.exp run_script.sh memclient.exp
   - ./run_script.sh
-  - ./memclient.expect s key1 value1 60
-  - ./test_script.expect localhost 11211
-  - ./memclient.expect g key1
-  - ./test_script.expect localhost 11211
-  - ./memclient.expect d key1
-  - ./test_script.expect localhost 11211
+  - ./memclient.exp s key1 value1 60
+  - ./telnet_test.exp localhost 11211
+  - ./memclient.exp g key1
+  - ./telnet_test.exp localhost 11211
+  - ./memclient.exp d key1
+  - ./telnet_test.exp localhost 11211
