@@ -1,2 +1,3 @@
-stats
-quit
+key1
+value1
+3600
