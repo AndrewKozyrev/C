@@ -12,7 +12,5 @@ script:
   - ./run_script
   - ./memclient -s < testing.txt
   - ./memclient -g < testing.txt
-  - telnet localhost 11211 << "EOF"
-  - "stats"
-  - "quit"
-  - "EOF"
+  - { echo "stats"; echo "quit"; sleep 1; } | telnet localhost 11211
+
