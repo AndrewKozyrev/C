@@ -12,4 +12,4 @@ script:
   - ./run_script
   - ./memclient -s < testing.txt
   - ./memclient -g < testing.txt
-  - { echo "stats"; echo "quit"; echo ; sleep 1; } | telnet localhost 11211
+  - { echo 'stats'; echo 'quit'; echo ; sleep 1; } | telnet localhost 11211
