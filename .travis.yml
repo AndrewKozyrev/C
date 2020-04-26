@@ -9,4 +9,4 @@ script:
   - cd TEST
   - memcached -d -u travis -m 128 -p 11211 127.0.0.1
   - chmod +x run_script
-  - stats | telnet localhost 11211
+  - telnet localhost 11211 < testing.txt
