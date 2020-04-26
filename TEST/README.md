@@ -8,4 +8,5 @@ test_script.expect  файл с проверкой через telnet
 testing.txt  файл с пробными данными.
 
 
-Проверка осуществляется через Travis-CI
+Проверка осуществляется через Travis-CI:    https://travis-ci.org/
+
