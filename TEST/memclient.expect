@@ -1,0 +1,28 @@
+#! /usr/bin/expect
+set timeout 10
+set fnc [lindex $argv 0]
+set key [lindex $argv 1]
+set val [lindex $argv 2]
+set tim [lindex $argv 3]
+spawn ./memclient -$fnc
+if {$fnc=="s"} {
+expect "Enter key: "
+send "$key\r"
+sleep 1
+expect "Enter value: "
+send "$val\r"
+sleep 1
+expect "Enter expiration time: "
+send "$tim\r"
+} elseif {$fnc == "g"} {
+expect "Enter key: "
+sleep .5
+send "$key\r"
+sleep 1
+} elseif {$fnc == "d"} {
+expect "Enter key: "
+sleep .5
+send "$key\r"
+sleep 1
+}
+interact
