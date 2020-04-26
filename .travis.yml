@@ -12,6 +12,7 @@ script:
   - ./run_script
   - ./memclient -s < testing.txt
   - ./memclient -g < testing.txt
-  - telnet localhost 11211 < /dev/null
-  - stats
-  - quit
+  - telnet localhost 11211 << EOF
+  stats
+  quit
+  EOF
