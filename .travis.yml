@@ -12,6 +12,7 @@ script:
   - memcached -d -u travis -m 128 -p 11211 127.0.0.1
   - chmod +x telnet_test.exp build_script.sh memclient.exp
   - ./build_script.sh
+  - #executing setData() function
   - ./memclient.exp s key1 value1 60
   - ./telnet_test.exp localhost 11211
   - ./memclient.exp g key1
