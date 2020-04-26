@@ -7,6 +7,7 @@ before_install:
   - sudo apt-get install libevent-dev
   - sudo apt-get install expect
 script:
+  - echo "Hello!"
   - cd TEST
   - memcached -d -u travis -m 128 -p 11211 127.0.0.1
   - chmod +x test_script.expect
