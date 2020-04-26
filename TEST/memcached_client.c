@@ -66,10 +66,10 @@ int getparam(int argc, char **argv)
         case 's':
             printf("Set function: \nEnter key: ");
             char key[1000];
-            scanf("%s", &key);
+            scanf("%s", key);
             printf("Enter value: ");
             char value[1000];
-            scanf("%s", &value);
+            scanf("%s", value);
             printf("Enter expiration time: ");
             int time;
             scanf("%d", &time);
@@ -77,12 +77,12 @@ int getparam(int argc, char **argv)
             break;
         case 'g':
             printf("Get function: \nEnter key: ");
-            scanf("%s", &key);
+            scanf("%s", key);
             getData(key);
             break;
         case 'd':
             printf("Delete function: \nEnter key: ");
-            scanf("%s", &key);
+            scanf("%s", key);
             rc = deleteData(key);
             break;
         case 'h':
