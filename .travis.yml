@@ -12,7 +12,10 @@ script:
   - echo $lib_location
   - memcached -d -u travis -m 128 -p 11211 127.0.0.1
   - chmod +x test_script.expect
-  - ./run_script
+  - chmod +x run_script.sh
+  - ./run_script.sh
   - ./memclient -s < testing.txt
   - ./memclient -g < testing.txt
+  - ./test_script.expect localhost 11211
+  - ./memclient -d < testing.txt
   - ./test_script.expect localhost 11211
