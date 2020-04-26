@@ -4,11 +4,11 @@
 
 memcached_client.c  файл с исходным кодом. Содержит три функции: setData, getData, deleteData. 
 
-run_script.sh   - скрипт сборки для memcached_client.c
+build_script.sh   - скрипт для сборки memcached_client.c
 
-test_script.expect  файл с проверкой через telnet
+telnet_test.exp  - скрипт с проверкой через telnet. Он написан на expect
 
-testing.txt  файл с пробными данными.
+memclient.exp  - скрипт для запуска приложения memclient. Написан с помощью синтаксиса expect
 
 файл .travis.yml в корневом каталоге репозитория содержит инструкции для сборки проекта
 
