@@ -12,10 +12,19 @@ script:
   - memcached -d -u travis -m 128 -p 11211 127.0.0.1
   - chmod +x telnet_test.exp build_script.sh memclient.exp
   - ./build_script.sh
-  - #executing setData() function
-  - ./memclient.exp s key1 value1 60
+  - echo "executing setData() function"
+  - ./memclient.exp s key1 value1 15
+  - echo "telnet check for the (key, value) pair"
   - ./telnet_test.exp localhost 11211
-  - ./memclient.exp g key1
+  - echo "executing getData() function with invalid key"
+  - ./memclient.exp g key2
+  - echo "executing setData() function with key2 value2 60"
+  - ./memclient.exp s key2 value2 60
+  - echo "sleeping for 15 seconds to expire key1"
+  - sleep 15
+  - echo "telnet check for the (key1, value1)"
   - ./telnet_test.exp localhost 11211
-  - ./memclient.exp d key1
+  - echo "executing deleteData() function for key2"
+  - ./memclient.exp d key2
+  - echo "telnet check for the (key2, value2)"
   - ./telnet_test.exp localhost 11211
