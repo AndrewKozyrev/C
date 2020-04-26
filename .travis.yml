@@ -8,9 +8,9 @@ before_install:
   - sudo apt-get install expect
 script:
   - cd TEST
-  - find / -name libmemcached
+  - lib_location=$(find / -name libmemcached)
+  - echo $lib_location
   - memcached -d -u travis -m 128 -p 11211 127.0.0.1
-  - chmod +x run_script
   - chmod +x test_script.expect
   - ./run_script
   - ./memclient -s < testing.txt
