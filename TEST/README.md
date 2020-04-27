@@ -14,3 +14,7 @@ memclient.exp  - скрипт для запуска приложения memclie
 
 Проверка осуществляется через Travis-CI:    https://travis-ci.org/
 
+Для проверки можно:
+1. fork
+2. зайти на Travis-CI
+3. запустить сборку
